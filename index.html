@@ -35,6 +35,8 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" />
 
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./css/owl.theme.default.min.css">
     <!-- Modernizr -->
     <script src="js/modernizr-3.6.0.min.js"></script>
 
@@ -229,7 +231,7 @@
                                 <p>They had taken overnight trips before, but this was their first huge vacations outside the USA. Sarah and Mark travelled to the Baltic region and visited a number of countries including Iceland, Finland, Denmark, Russia,
                                     Poland and Germany . It was a 24 day fabulous trip! It was super intense but so rewarding for both. </p>
 
-                                <div class="owl-carousel timeline-gallery">
+                                <div class="owl-carousel owl-theme timeline-gallery">
                                     <div class="item">
                                         <a href="images/first-vacations1.jpg" data-gal="prettyPhoto[gallery-timeline]" title="Our Vacations"><span class="btn btn-default2">+</span></a>
                                         <img src="images/first-vacations1-thumb.jpg" alt="" />
@@ -325,7 +327,6 @@
                     </div>
                 </div>
             </div>
-
             <div id="map_canvas"></div>
 
             <div class="map_pins">
@@ -401,7 +402,7 @@
                         </div>
 
                         <!-- Begin Bridesmaid slider -->
-                        <div id="bridesmaids-slider" class="owl-carousel bridesmaids-groomsmen-slider">
+                        <div id="bridesmaids-slider" class="owl-carousel owl-theme bridesmaids-groomsmen-slider">
                             <div class="item" data-animation-direction="from-bottom" data-animation-delay="250">
                                 <div class="image">
                                     <a href="#" class="info">
@@ -455,7 +456,7 @@
                         <!-- End Bridesmaid slider -->
 
                         <!-- Begin Groomsmen slider with class "hide" -->
-                        <div id="groomsmen-slider" class="owl-carousel bridesmaids-groomsmen-slider hide">
+                        <div id="groomsmen-slider" class="owl-carousel owl-theme bridesmaids-groomsmen-slider hide">
                             <div class="item">
                                 <div class="image">
                                     <a href="#" class="info">
@@ -972,18 +973,6 @@
         </footer>
 
     </div>
-
-    <!-- BEGIN TEMPLATE SETTINGS PANEL -->
-    <!-- <div id="template-settings">
-        <i class="fa fa-cog"></i>
-
-        <h4>Color: *</h4>
-        <input class="minicolors" type="text" name="color-picker" value="ad9fb3" />
-
-        <div>* May not be fully accurate!</div>
-    </div> -->
-    <!-- END TEMPLATE SETTINGS PANEL -->
-
     <!-- Libs -->
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/jquery-migrate-3.3.2.min.js"></script>
@@ -1032,6 +1021,27 @@
             ga('send', 'event', 'button', 'click', 'settings-button');
         });
     </script>
+
+    <script src="./js/owl.carousel.min.js"></script>
+    <script>
+        $(".owl-carousel").owlCarousel({
+          loop: true,
+          nav: false,
+          autoplay: true,
+          autoplayTimeout: 5000,
+          responsive: {
+            0: {
+              items: 2,
+            },
+            600: {
+              items: 3,
+            },
+            1000: {
+              items: 4,
+            },
+          },
+        });
+      </script>
 
 
     <!-- Google Code for Remarketing Tag -->
